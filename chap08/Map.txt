@@ -1,0 +1,60 @@
+선언방법 : let mp = new Map();          ->key가 고유하다~~~~~!!!!!!!!
+
+mp.set(key,value);
+mp.delete   //삭제
+mp.clear;   //지우기
+mp.size //사이즈 출력
+
+
+맵은 키로 객체를 허용한다!
+let student = {name : "John"};      //객체
+let visitCount = new Map();     //맵
+visitCount.set(student, 123);       맵의셋 key에 객체를 대입, value에는 123
+
+
+호출체이닝이 가능하다
+mp.set("cucumber", 1000).set("tomato",700).delete("onion",2000);
+
+
+객체를 맵으로 바꾸기 object.entires(객체);
+
+let who = {name : "jack",
+age : 18
+};
+
+let w = new Map(object.entires(who));
+m.get("age")'
+
+맵을 객체로 바꾸기 Object.fromEntries(맵)
+let prices = Object.fromEntrues([
+    ['banana',1],
+    ['melon',2],
+    ['wathermelon',3],
+]);
+console.log(prices);
+
+
+
+for ~ of로 키값 가져오기
+
+let recipeMap = new Map([
+    ['cucumber',500],
+    ['tomato',350],
+    ['onion',50],
+]);
+
+for (let key of recipeMap.keys()) {
+    console.log(key);
+}
+
+for(let value of recipeMap.values()){
+    console.log(value);
+}
+
+키값만 가져오려면 map.key()로 사용 변수 출력
+벨류값만 가져오려면 map.values()로 사용 변수 출력
+
+forEach로도 가능 메개변수 순서 지키기 주의!
+recipeMap.forEach((value,key,map)=>{(
+    console.log(`key : ${key} value : ${value}`))
+});
