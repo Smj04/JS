@@ -64,6 +64,7 @@ document.querySelector("#calculate").addEventListener("click", ()=>{
             case '-': result_value.value = num1 - num2; break;
             case '*': result_value.value = num1 * num2; break;
             case '/': result_value.value = num1 / num2; break;
+            default break;
         }
     }else{
         alert('숫자를 입력하세요.');
