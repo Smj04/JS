@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+</head>
+<body>
+    <div id ="elem">Hello<b>World</b></div>
+    <script>
+        //1번의 경우 : html요소 자체를 바꾼다. inner를 많이 씀
+        let elem = document.getElementById("elem");
+       alert(elem.innerHTML);           //태그까지 출력
+       elem.innerHTML = "<p>A new element</p>";
+       alert(elem.innerHTML);           
+
+       //2번의 요소 : html요소를 바꾸지 않고 Dom요소를 바꾼다.
+       elem.outerHTML = "<p>A new element</p>";
+       alert(elem.outerHTML);           
+       //div 전체가 리턴됨
+    </script>
+</body>
+</html>
