@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+</head>
+<body>
+    <div>프로퍼티를 연습합니다.</div>
+    <script>
+        let elem = document.body;
+        alert(elem.nodeType);
+        alert(elem.constructor.name);
+        alert(document.nodeType);
+        alert(document.body.nodeName); 
+        elem.innerHTML - "글자";
+        elem.innerHTML = "<h1>글자</h1>";
+        elem.innerHTML = "<h2>글자</h2>";           //덮어진다. (Overwrite)
+        elem.innerHTML += "<b>LETTERS  </b>";      //+=을 쓰면 안 덮어진다!
+    </script>
+</body>
+</html>
