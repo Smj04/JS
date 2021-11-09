@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+</head>
+<body>
+    안녕하세요
+    <script>
+    let text = document.body.firstChild;        //바디의 첫노드(텍스트 노드 안녕하세요)를 가져온다.
+    alert(text.data);                           //값을 리턴한다. (.data속성)
+    </script>
+
+    <div id="news">
+        <p>주요 뉴스!</p>
+        <p>개발자 전성시대 도래</p>
+    </div>
+
+    <script>
+        // let news = document.getElementById("news");  이 문장은 생략가능하다. 자동으로 알아먹음
+        alert(news.textContent);                        //위에 뉴스의 글자를 리턴한다. 
+    </script>
+
+    <div id="elem1"></div>
+    <div id="elem2"></div>
+    <script>
+        let name = prompt("이름을 알려주세요.", "<b>이보라</b>");       
+
+        elem1.innerHTML = name;
+        // elem1.outerHTML = name;
+        elem1.textContent = name;           //textContent는 위 <b>이보라<b>를 순수한 '이보라'로 본다.
+    </script>
+
+    <div>아래 두 div를 숨겨봅시다.</div>
+
+    <div hidden>html의 hidden</div>                
+
+    <div id="hid">자바스크립트의 hidden</div>
+
+    <script>
+        hid.hidden = true;
+    </script>
+</body>
+</html>
