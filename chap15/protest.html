@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<!--https제외 오렌지색으로 변환하기-->
+<body>
+    <a name = "list">list</a>
+    <ul>
+        <li><a href="https://www.naver.com">https://www.naver.com</a></li>
+        <li><a href="https://www.daum.net">https://www.daum.net</a></li>
+        <li><a href="https://www.google.co.kr">https://www.google.co.kr</a></li>
+        <li><a href="https://ko.javascript.info">https://ko.javascript.info</a></li>
+    </ul>
+    <script>
+        let links = document.querySelectorAll('a');
+        for (let link of links) {
+            // let href = link.getAttribute('href');                  //1. href값들을 읽음
+            // if(!href) continue;                                //href값들이 있을 때만 동작 
+            if(!href.includes('://')) continue;
+            if(href.startsWith('http://')) continue;                       //2. https:/
+            link.style.color = 'orange';
+        }
+        
+        
+    </script>
+</body>
+</html>

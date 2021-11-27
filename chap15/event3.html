@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+</head>
+<body>
+  <input type="button" id="elem" value="클릭해 주세요.">
+  <script>
+    function handler1(){
+      alert("thank you");
+    }
+    function handler2(){
+      alert("thank you, again!!");
+    }
+    elem.onclick = () => alert("hi");   //버튼 클릭동작을 여러개 가능하다. addEventListerner()
+    elem.addEventListener("click", handler1);
+    elem.addEventListener("click", handler2);
+  </script>
+</body>
+</html>
